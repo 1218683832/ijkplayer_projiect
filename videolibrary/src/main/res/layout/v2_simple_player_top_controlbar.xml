@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/v2_simple_player_top_controlbar_container"
+    style="@style/v2_simple_player_video_background_style"
+    android:background="@android:color/transparent"
+    tools:background="@android:color/black"
+    tools:visibility="visible">
+
+    <!-- 顶部栏，返回icon -->
+    <ImageView
+        android:id="@+id/app_video_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@drawable/v2_simple_player_left_back_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 顶部栏，视频标题文字 -->
+    <TextView
+        android:id="@+id/app_video_title"
+        style="@style/v2_simple_player_video_title_text_style"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/app_video_finish"
+        app:layout_constraintRight_toLeftOf="@+id/app_video_cast"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="视频标题"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/app_video_cast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/app_video_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginRight="8dp">
+        <!-- 顶部栏，投屏icon -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:src="@drawable/v2_simple_player_cast_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="投屏"
+            android:textColor="@color/text_white"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <!-- 顶部栏，菜单icon -->
+    <ImageView
+        android:id="@+id/app_video_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@drawable/v2_simple_player_menu_icon"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

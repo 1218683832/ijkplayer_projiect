@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/v2_simple_player_center_controlbar_container"
+    style="@style/v2_simple_player_video_background_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:visibility="visible">
+
+    <!-- 封面显示-->
+    <ImageView
+        android:id="@+id/iv_trumb"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Audio的旋转封页-->
+    <ImageView
+        android:id="@+id/iv_trumb_audio"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <!--加载中lay -->
+    <LinearLayout
+        android:id="@+id/app_video_loading_box"
+        style="@style/v2_simple_player_video_volume_lay_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateOnly="true" />
+
+        <TextView
+            android:id="@+id/app_video_speed"
+            style="@style/v2_simple_player_video_title_text_style"
+            android:visibility="gone"
+            tools:text="188Kb/s" />
+    </LinearLayout>
+
+    <!-- 最大试看时长提示lay -->
+    <LinearLayout
+        android:id="@+id/app_video_freeTie_box"
+        style="@style/v2_simple_player_video_volume_lay_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000">
+
+        <TextView
+            style="@style/v2_simple_player_video_freeTie_text_style"
+            android:text="试看时间已到请购买继续观看"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/app_video_freeTie_icon"
+            style="@style/v2_simple_player_video_freeTie_text_style"
+            android:text="购买"
+            tools:text="试看时间已到请购买继续观看" />
+    </LinearLayout>
+
+    <!-- 移动网络流量费用提示lay -->
+    <LinearLayout
+        android:id="@+id/app_video_netTie_box"
+        style="@style/v2_simple_player_video_volume_lay_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000">
+
+        <TextView
+            style="@style/v2_simple_player_video_freeTie_text_style"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="您正在使用移动网络播放视频\n可能产生较高流量费用" />
+
+        <TextView
+            android:id="@+id/app_video_netTie_icon"
+            style="@style/v2_simple_player_video_freeTie_text_style"
+            android:background="@drawable/v2_simple_player_btn"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="继续" />
+    </LinearLayout>
+
+    <!-- 重新播放lay -->
+    <LinearLayout
+        android:id="@+id/app_video_replay_box"
+        style="@style/v2_simple_player_video_volume_lay_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000">
+        <!-- 播放状态-->
+        <TextView
+            android:id="@+id/app_video_status_text"
+            style="@style/v2_simple_player_video_freeTie_text_style"
+            android:text="@string/small_problem" />
+
+        <ImageView
+            android:id="@+id/app_video_replay_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/v2_simple_player_circle_outline_replay_icon"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- 声音显示lay -->
+    <LinearLayout
+        android:id="@+id/app_video_volume_box"
+        style="@style/v2_simple_player_video_volume_lay_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 声音icon -->
+        <ImageView
+            android:id="@+id/app_video_volume_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/v2_simple_player_volume_up_icon" />
+        <!-- 声音数值文本 -->
+        <TextView
+            android:id="@+id/app_video_volume_text"
+            style="@style/v2_simple_player_video_volume_text_text_style"
+            android:text="0" />
+    </LinearLayout>
+
+    <!-- 亮度显示lay -->
+    <LinearLayout
+        android:id="@+id/app_video_brightness_box"
+        style="@style/v2_simple_player_video_volume_lay_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 亮度icon -->
+        <ImageView
+            android:id="@+id/app_video_brightness_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/v2_simple_player_brightness_icon" />
+        <!-- 亮度数值文本 -->
+        <TextView
+            android:id="@+id/app_video_brightness_text"
+            style="@style/v2_simple_player_video_volume_text_text_style" />
+    </LinearLayout>
+
+    <!-- 快进快退lay -->
+    <LinearLayout
+        android:id="@+id/app_video_fastForward_box"
+        style="@style/v2_simple_player_video_volume_lay_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/app_video_fastForward"
+            style="@style/v2_simple_player_video_fastForward_text_style"
+            android:paddingTop="8dp"
+            android:text="+10s" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/app_video_fastForward_target"
+                style="@style/v2_simple_player_video_fastForward_text_style" />
+
+            <TextView
+                style="@style/v2_simple_player_video_fastForward_text_style"
+                android:text="/" />
+
+            <TextView
+                android:id="@+id/app_video_fastForward_all"
+                style="@style/v2_simple_player_video_fastForward_text_style" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 分辨率选择 -->
+    <LinearLayout
+        android:id="@+id/v2_simple_player_select_stream_container"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/v2_simple_player_select_streams_list"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- 视频播放/暂停icon -->
+    <ImageView
+        android:id="@+id/play_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/v2_simple_player_center_play_icon"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

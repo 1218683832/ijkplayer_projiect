@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- 视频背景样式 -->
+    <style name="v2_simple_player_video_background_style">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <!-- 视频标题文字样式 -->
+    <style name="v2_simple_player_video_title_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:text">视频标题</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+    <!-- 视频时长样式 -->
+    <style name="v2_simple_player_video_time_text_style" parent="v2_simple_player_video_title_text_style">
+        <item name="android:text">00:00</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <!-- 视最大试看时长提示样式 -->
+    <style name="v2_simple_player_video_freeTie_text_style" parent="v2_simple_player_video_title_text_style">
+        <item name="android:text">试看时间已到请购买继续观看</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:padding">8dp</item>
+    </style>
+    <!-- 视频快进快退样式 -->
+    <style name="v2_simple_player_video_fastForward_text_style" parent="v2_simple_player_video_title_text_style">
+        <item name="android:text">00:00</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- 视频进度条样式 -->
+    <style name="v2_simple_player_video_seekbar_style">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:focusable">true</item>
+        <item name="android:progressDrawable">
+            @drawable/v2_simple_player_progress_horizontal_holo_dark
+        </item>
+        <item name="android:indeterminateDrawable">
+            @drawable/v2_simple_player_progress_horizontal_holo_dark
+        </item>
+        <item name="android:thumb">@drawable/v2_simple_player_control_selector_holo_dark</item>
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+    <!-- 声音数值样式 -->
+    <style name="v2_simple_player_video_volume_text_text_style" parent="v2_simple_player_video_title_text_style">
+        <item name="android:text">0%</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:padding">4dp</item>
+    </style>
+    <!-- 声音显示lay样式 -->
+    <style name="v2_simple_player_video_volume_lay_style">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:background">@drawable/v2_simple_player_center_bg_shape</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:visibility">gone</item>
+    </style>
+</resources>
